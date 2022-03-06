@@ -278,6 +278,10 @@
 <div class="py-5">
     <div class="container">
         <div class="row align-items-center">
+<!--            <div class="col-md-3 col-sm-6 my-3">-->
+<!--                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg"-->
+<!--                                  alt="..."/></a>-->
+<!--            </div>-->
             <div class="col-md-4 col-sm-6 my-3">
                 <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg"
                                   alt="..."/></a>
@@ -302,19 +306,26 @@
             <h2 class="section-heading text-uppercase">Contattaci</h2>
             <h3 class="section-subheading text-muted">Perchè limitarsi a guardare. Contattaci.</h3>
         </div>
-
-        <form id="contactForm" action="mailto:oliosorrentino@gmail.com" method="post">
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- * * SB Forms Contact Form * *-->
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- This form is pre-integrated with SB Forms.-->
+        <!-- To make this form functional, sign up at-->
+        <!-- https://startbootstrap.com/solution/contact-forms-->
+        <!-- to get an API token!-->
+        <form id="contactForm" data-sb-form-api-token="0c9d0804-c0c2-4c21-8902-6da5e12e10a2" >
+<!--        <form id="contactForm" action="" method="post" enctype="text/plain">-->
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-6">
                     <div class="form-group">
                         <!-- Name input-->
-                        <input class="form-control" id="name" required type="text" name="name" placeholder="Tuo nome *"
+                        <input class="form-control" id="name" type="text" placeholder="Tuo nome *"
                                data-sb-validations="required"/>
                         <div class="invalid-feedback" data-sb-feedback="name:required">Un nome e' richiesto.</div>
                     </div>
                     <div class="form-group">
                         <!-- Email address input-->
-                        <input class="form-control" id="email" required type="email" name="email" placeholder="Email *"
+                        <input class="form-control" id="email" type="email" placeholder="Email *"
                                data-sb-validations="required,email"/>
                         <div class="invalid-feedback" data-sb-feedback="email:required">Un indirizzo email valido.</div>
                         <div class="invalid-feedback" data-sb-feedback="email:email">Email non valida</div>
@@ -323,7 +334,7 @@
                 <div class="col-md-6">
                     <div class="form-group form-group-textarea mb-md-0">
                         <!-- Message input-->
-                        <textarea class="form-control" id="message" name="message" required placeholder="Scrivi qui un messaggio *"
+                        <textarea class="form-control" id="message" placeholder="Scrivi qui un messaggio *"
                                   data-sb-validations="required"></textarea>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                     </div>
@@ -350,7 +361,7 @@
             </div>
             <!-- Submit Button-->
             <div class="text-center">
-                <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Invia
+                <button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Invia
                     Messaggio
                 </button>
             </div>
